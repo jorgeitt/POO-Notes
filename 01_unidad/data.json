@@ -1,0 +1,100 @@
+{
+"titulo_introduccion": "1. Introducción al paradigma de la programación orientada a objetos",
+"titulo_actividades": "2. ACTIVIDADES (UNIDAD 1)",
+"titulo_recursos": "3. RECURSOS (UNIDAD 1)",
+"titulo_asesorias": "4. ASESORÍAS (UNIDAD 1)",
+"introduccion": [
+{
+"num": "1.1",
+"titulo": "1.1. Elementos del modelo de objetos:",
+"descripcion": "clases, objetos, abstracción, modularidad, encapsulamiento, herencia y polimorfismo."
+},
+{
+"num": "1.2",
+"titulo": "1.2. Lenguaje de modelado unificado:",
+"descripcion": "diagrama de clases."
+}
+],
+"actividades": [
+{
+"texto": "1.- Web - Actividad 1.1: Cuadro Comparativo de Paradigmas de Programación.",
+"url": "https://sites.google.com/view/poo-tecnm/unidad-1/actividad-1-1"
+},
+{
+"texto": "2.- Web - Actividad 1.2: Glosario de Conceptos de Objetos y Citas IEEE.",
+"url": "https://sites.google.com/view/poo-tecnm/unidad-1/actividad-1-2"
+},
+{
+"texto": "3.- Web - Actividad 1.3: Ejercicios de Modelado de Diagramas UML.",
+"url": "https://sites.google.com/view/poo-tecnm/unidad-1/actividad-1-3"
+},
+{
+"texto": "4.- Web - Actividad 1.4: Implementación de Clases en Java y Reporte.",
+"url": "https://sites.google.com/view/poo-tecnm/unidad-1/actividad-1-4"
+}
+],
+"recursos": [
+{
+"texto": "1.- Web - Introducción a la programación orientada a objetos.",
+"url": "https://sites.google.com/view/poo-tecnm/recursos/introduccion-poo",
+"tipo": "sitio web"
+},
+{
+"texto": "2.- Documento - Plantilla Institucional de Trabajos 1U.",
+"url": "https://sites.google.com/view/poo-tecnm/recursos/plantilla-trabajos",
+"tipo": "docx"
+},
+{
+"texto": "3.- PDF - Lista de Cotejo y Rúbrica Oficial de Evaluación.",
+"url": "https://sites.google.com/view/poo-tecnm/recursos/lista-cotejo",
+"tipo": "pdf"
+},
+{
+"texto": "4.- Guía - Del Paradigma Estructurado a Programación Orientada a Objetos.",
+"url": "https://sites.google.com/view/poo-tecnm/recursos/guia-paradigma-poo",
+"tipo": "pdf"
+},
+{
+"texto": "5.- Cheatsheet - Simbología y Relaciones Diagrama de Clases UML 2.5.",
+"url": "https://sites.google.com/view/poo-tecnm/recursos/simbologia-uml",
+"tipo": "pdf"
+},
+{
+"texto": "6.- Código - Repositorio de Ejemplo Java (Clase Estudiante y Persona).",
+"url": "https://sites.google.com/view/poo-tecnm/recursos/codigo-java-ejemplo",
+"tipo": "zip"
+},
+{
+"texto": "7.- Guía - Manual de Citación y Referencias Estándar IEEE.",
+"url": "https://sites.google.com/view/poo-tecnm/recursos/guia-citacion-ieee",
+"tipo": "pdf"
+}
+],
+"asesorias": [
+{
+"texto": "1.- Web - Sesión 1: Resolución de Dudas de Modelado UML y Relaciones.",
+"url": "https://sites.google.com/view/poo-tecnm/asesorias/sesion-1-uml",
+"tipo": "video"
+},
+{
+"texto": "2.- Web - Sesión 2: Taller Práctico - De Diagramas UML a Clases Java.",
+"url": "https://sites.google.com/view/poo-tecnm/asesorias/sesion-2-java",
+"tipo": "video"
+},
+{
+"texto": "3.- Web - Sesión 3: Asesoría de Diagnóstico y Errores Sintácticos Frecuentes.",
+"url": "https://sites.google.com/view/poo-tecnm/asesorias/sesion-3-errores",
+"tipo": "video"
+},
+{
+"texto": "4.- Web - Horario de Atención Presencial y Agendamiento de Citas.",
+"url": "https://sites.google.com/view/poo-tecnm/asesorias/horarios-presenciales",
+"tipo": "agenda"
+},
+{
+"texto": "5.- Web - Foro de Preguntas Frecuentes y Consultas Asíncronas.",
+"url": "https://sites.google.com/view/poo-tecnm/asesorias/foro-dudas",
+"tipo": "foro"
+}
+]
+}
