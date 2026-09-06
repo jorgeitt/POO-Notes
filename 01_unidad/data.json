@@ -36,8 +36,8 @@
 "recursos": [
 {
 "texto": "1.- Web - Fundamentos del modelo de objetos.",
-"url": "https://sites.google.com/view/poo-tecnm/recursos/introduccion-poo",
-"tipo": "sitio web"
+"url": "https://jorgeitt.github.io/POO-Notes/01_unidad/01_fundamentos_modelo_objetos.md",
+"tipo": "Web"
 },
 {
 "texto": "2.- Web - Encapsulamiento, Herencia, Polimorfismo.",
