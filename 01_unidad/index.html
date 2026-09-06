@@ -34,19 +34,18 @@
 <!-- Chosen Palette: TecNM Academic Orange & Warm Neutral - Background (#FAF9F6), Slate (#0F172A), TecNM Orange Accent (#EA580C / #F97316) -->
 
 <!-- Application Structure Plan:
-     The header retains full pipeline overview (U1 through U6), while the main body exclusively focuses on Unidad 1 in a compact, itemized list format across all 4 sections:
-     1. Introducción: Ultra-compact itemized list for Unit 1 thematic structure.
-     2. Actividades: Clean list of items without any scores, percentage labels, or introductory captions.
-     3. Recursos: Numbered itemized list pointing to Unit 1 resources without introductory captions.
-     4. Asesorías: Numbered itemized list connecting to Unit 1 advising and workshops without introductory captions.
+     The HTML structure fetches data dynamically from an external 'data.json' file located in the same directory.
+     If data.json is present, it dynamically populates:
+     1. Introducción: Itemized list of U1 subtopics.
+     2. Actividades: Itemized links for U1 tasks without score badges.
+     3. Recursos: Itemized links for study resources.
+     4. Asesorías: Itemized links for workshops and support sessions.
+     Includes local fallback data in JavaScript to ensure standard preview rendering if fetched over local file:// protocol.
 -->
 
 <!-- Visualization & Content Choices:
-     - Header -> Complete 6-unit horizontal pipeline for course context.
-     - Section 1 Content -> Ultra-compact list presenting items 1, 1.1, and 1.2.
-     - Activities List -> Itemized links for U1 tasks without captions or score badges.
-     - Resource List -> Itemized links for U1 study materials without captions.
-     - Advising List -> Itemized links for U1 support sessions without captions.
+     - Header -> Complete 6-unit horizontal pipeline.
+     - Section 1-4 Content -> Dynamically injected via Vanilla JS fetch() from 'data.json'.
 -->
 
 <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
@@ -82,33 +81,15 @@
 
         <!-- ================= SECCIÓN 1: INTRODUCCIÓN ================= -->
         <section id="sec-introduccion" class="space-y-4">
-            
             <div class="border-b-4 border-orange-600 pb-2">
                 <span class="text-xs font-bold uppercase tracking-widest text-orange-600 font-mono">SECCIÓN 1</span>
-                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">
+                <h2 id="titulo-introduccion" class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">
                     1. Introducción al paradigma de la programación orientada a objetos
                 </h2>
             </div>
 
             <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200">
-                <ul class="divide-y divide-slate-100 text-sm md:text-base font-medium">
-                    
-                    <li class="py-3 flex items-start gap-3">
-                        <span class="font-mono text-xs font-bold px-2 py-1 bg-orange-100 text-orange-700 rounded mt-0.5 shrink-0">1.1</span>
-                        <div class="text-slate-800 leading-relaxed">
-                            <strong class="text-slate-900 font-bold">1.1. Elementos del modelo de objetos:</strong> 
-                            <span class="text-slate-600">clases, objetos, abstracción, modularidad, encapsulamiento, herencia y polimorfismo.</span>
-                        </div>
-                    </li>
-
-                    <li class="py-3 flex items-start gap-3">
-                        <span class="font-mono text-xs font-bold px-2 py-1 bg-orange-100 text-orange-700 rounded mt-0.5 shrink-0">1.2</span>
-                        <div class="text-slate-800 leading-relaxed">
-                            <strong class="text-slate-900 font-bold">1.2. Lenguaje de modelado unificado:</strong> 
-                            <span class="text-slate-600">diagrama de clases.</span>
-                        </div>
-                    </li>
-
+                <ul id="lista-introduccion" class="divide-y divide-slate-100 text-sm md:text-base font-medium">
                 </ul>
             </div>
         </section>
@@ -116,39 +97,13 @@
 
         <!-- ================= SECCIÓN 2: ACTIVIDADES ================= -->
         <section id="sec-actividades" class="space-y-4">
-            
             <div class="border-b-4 border-orange-600 pb-2">
                 <span class="text-xs font-bold uppercase tracking-widest text-orange-600 font-mono">SECCIÓN 2</span>
-                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">2. ACTIVIDADES (UNIDAD 1)</h2>
+                <h2 id="titulo-actividades" class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">2. ACTIVIDADES (UNIDAD 1)</h2>
             </div>
 
             <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200">
-                <ul class="divide-y divide-slate-100 text-sm md:text-base font-medium">
-                    
-                    <li class="py-3 px-2 hover:bg-slate-50 rounded-lg transition">
-                        <a href="https://sites.google.com/view/poo-tecnm/unidad-1/actividad-1-1" target="_blank" rel="noopener noreferrer" class="text-slate-900 hover:text-orange-600 font-bold block">
-                            1.- Web - Actividad 1.1: Cuadro Comparativo de Paradigmas de Programación.
-                        </a>
-                    </li>
-
-                    <li class="py-3 px-2 hover:bg-slate-50 rounded-lg transition">
-                        <a href="https://sites.google.com/view/poo-tecnm/unidad-1/actividad-1-2" target="_blank" rel="noopener noreferrer" class="text-slate-900 hover:text-orange-600 font-bold block">
-                            2.- Web - Actividad 1.2: Glosario de Conceptos de Objetos y Citas IEEE.
-                        </a>
-                    </li>
-
-                    <li class="py-3 px-2 hover:bg-slate-50 rounded-lg transition">
-                        <a href="https://sites.google.com/view/poo-tecnm/unidad-1/actividad-1-3" target="_blank" rel="noopener noreferrer" class="text-slate-900 hover:text-orange-600 font-bold block">
-                            3.- Web - Actividad 1.3: Ejercicios de Modelado de Diagramas UML.
-                        </a>
-                    </li>
-
-                    <li class="py-3 px-2 hover:bg-slate-50 rounded-lg transition">
-                        <a href="https://sites.google.com/view/poo-tecnm/unidad-1/actividad-1-4" target="_blank" rel="noopener noreferrer" class="text-slate-900 hover:text-orange-600 font-bold block">
-                            4.- Web - Actividad 1.4: Implementación de Clases en Java y Reporte.
-                        </a>
-                    </li>
-
+                <ul id="lista-actividades" class="divide-y divide-slate-100 text-sm md:text-base font-medium">
                 </ul>
             </div>
         </section>
@@ -156,64 +111,13 @@
 
         <!-- ================= SECCIÓN 3: RECURSOS ================= -->
         <section id="sec-recursos" class="space-y-4">
-            
             <div class="border-b-4 border-orange-600 pb-2">
                 <span class="text-xs font-bold uppercase tracking-widest text-orange-600 font-mono">SECCIÓN 3</span>
-                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">3. RECURSOS (UNIDAD 1)</h2>
+                <h2 id="titulo-recursos" class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">3. RECURSOS (UNIDAD 1)</h2>
             </div>
 
             <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200">
-                <ul class="divide-y divide-slate-100 text-sm md:text-base font-medium">
-                    
-                    <li class="py-3 flex flex-col sm:flex-row justify-between sm:items-center gap-2 hover:bg-slate-50 px-2 rounded-lg transition">
-                        <a href="https://sites.google.com/view/poo-tecnm/recursos/introduccion-poo" target="_blank" rel="noopener noreferrer" class="text-slate-900 hover:text-orange-600 font-bold">
-                            1.- Web - Introducción a la programación orientada a objetos.
-                        </a>
-                        <span class="text-xs text-slate-400 font-mono">sitio web</span>
-                    </li>
-
-                    <li class="py-3 flex flex-col sm:flex-row justify-between sm:items-center gap-2 hover:bg-slate-50 px-2 rounded-lg transition">
-                        <a href="https://sites.google.com/view/poo-tecnm/recursos/plantilla-trabajos" target="_blank" rel="noopener noreferrer" class="text-slate-900 hover:text-orange-600 font-bold">
-                            2.- Documento - Plantilla Institucional de Trabajos 1U.
-                        </a>
-                        <span class="text-xs text-slate-400 font-mono">docx</span>
-                    </li>
-
-                    <li class="py-3 flex flex-col sm:flex-row justify-between sm:items-center gap-2 hover:bg-slate-50 px-2 rounded-lg transition">
-                        <a href="https://sites.google.com/view/poo-tecnm/recursos/lista-cotejo" target="_blank" rel="noopener noreferrer" class="text-slate-900 hover:text-orange-600 font-bold">
-                            3.- PDF - Lista de Cotejo y Rúbrica Oficial de Evaluación.
-                        </a>
-                        <span class="text-xs text-slate-400 font-mono">pdf</span>
-                    </li>
-
-                    <li class="py-3 flex flex-col sm:flex-row justify-between sm:items-center gap-2 hover:bg-slate-50 px-2 rounded-lg transition">
-                        <a href="https://sites.google.com/view/poo-tecnm/recursos/guia-paradigma-poo" target="_blank" rel="noopener noreferrer" class="text-slate-900 hover:text-orange-600 font-bold">
-                            4.- Guía - Del Paradigma Estructurado a Programación Orientada a Objetos.
-                        </a>
-                        <span class="text-xs text-slate-400 font-mono">pdf</span>
-                    </li>
-
-                    <li class="py-3 flex flex-col sm:flex-row justify-between sm:items-center gap-2 hover:bg-slate-50 px-2 rounded-lg transition">
-                        <a href="https://sites.google.com/view/poo-tecnm/recursos/simbologia-uml" target="_blank" rel="noopener noreferrer" class="text-slate-900 hover:text-orange-600 font-bold">
-                            5.- Cheatsheet - Simbología y Relaciones Diagrama de Clases UML 2.5.
-                        </a>
-                        <span class="text-xs text-slate-400 font-mono">pdf</span>
-                    </li>
-
-                    <li class="py-3 flex flex-col sm:flex-row justify-between sm:items-center gap-2 hover:bg-slate-50 px-2 rounded-lg transition">
-                        <a href="https://sites.google.com/view/poo-tecnm/recursos/codigo-java-ejemplo" target="_blank" rel="noopener noreferrer" class="text-slate-900 hover:text-orange-600 font-bold">
-                            6.- Código - Repositorio de Ejemplo Java (Clase Estudiante y Persona).
-                        </a>
-                        <span class="text-xs text-slate-400 font-mono">zip</span>
-                    </li>
-
-                    <li class="py-3 flex flex-col sm:flex-row justify-between sm:items-center gap-2 hover:bg-slate-50 px-2 rounded-lg transition">
-                        <a href="https://sites.google.com/view/poo-tecnm/recursos/guia-citacion-ieee" target="_blank" rel="noopener noreferrer" class="text-slate-900 hover:text-orange-600 font-bold">
-                            7.- Guía - Manual de Citación y Referencias Estándar IEEE.
-                        </a>
-                        <span class="text-xs text-slate-400 font-mono">pdf</span>
-                    </li>
-
+                <ul id="lista-recursos" class="divide-y divide-slate-100 text-sm md:text-base font-medium">
                 </ul>
             </div>
         </section>
@@ -221,50 +125,13 @@
 
         <!-- ================= SECCIÓN 4: ASESORÍAS ================= -->
         <section id="sec-asesorias" class="space-y-4">
-            
             <div class="border-b-4 border-orange-600 pb-2">
                 <span class="text-xs font-bold uppercase tracking-widest text-orange-600 font-mono">SECCIÓN 4</span>
-                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">4. ASESORÍAS (UNIDAD 1)</h2>
+                <h2 id="titulo-asesorias" class="text-2xl md:text-3xl font-extrabold text-slate-900 tracking-tight">4. ASESORÍAS (UNIDAD 1)</h2>
             </div>
 
             <div class="bg-white rounded-2xl p-5 shadow-sm border border-slate-200">
-                <ul class="divide-y divide-slate-100 text-sm md:text-base font-medium">
-                    
-                    <li class="py-3 flex flex-col sm:flex-row justify-between sm:items-center gap-2 hover:bg-slate-50 px-2 rounded-lg transition">
-                        <a href="https://sites.google.com/view/poo-tecnm/asesorias/sesion-1-uml" target="_blank" rel="noopener noreferrer" class="text-slate-900 hover:text-orange-600 font-bold">
-                            1.- Web - Sesión 1: Resolución de Dudas de Modelado UML y Relaciones.
-                        </a>
-                        <span class="text-xs text-slate-400 font-mono">video</span>
-                    </li>
-
-                    <li class="py-3 flex flex-col sm:flex-row justify-between sm:items-center gap-2 hover:bg-slate-50 px-2 rounded-lg transition">
-                        <a href="https://sites.google.com/view/poo-tecnm/asesorias/sesion-2-java" target="_blank" rel="noopener noreferrer" class="text-slate-900 hover:text-orange-600 font-bold">
-                            2.- Web - Sesión 2: Taller Práctico - De Diagramas UML a Clases Java.
-                        </a>
-                        <span class="text-xs text-slate-400 font-mono">video</span>
-                    </li>
-
-                    <li class="py-3 flex flex-col sm:flex-row justify-between sm:items-center gap-2 hover:bg-slate-50 px-2 rounded-lg transition">
-                        <a href="https://sites.google.com/view/poo-tecnm/asesorias/sesion-3-errores" target="_blank" rel="noopener noreferrer" class="text-slate-900 hover:text-orange-600 font-bold">
-                            3.- Web - Sesión 3: Asesoría de Diagnóstico y Errores Sintácticos Frecuentes.
-                        </a>
-                        <span class="text-xs text-slate-400 font-mono">video</span>
-                    </li>
-
-                    <li class="py-3 flex flex-col sm:flex-row justify-between sm:items-center gap-2 hover:bg-slate-50 px-2 rounded-lg transition">
-                        <a href="https://sites.google.com/view/poo-tecnm/asesorias/horarios-presenciales" target="_blank" rel="noopener noreferrer" class="text-slate-900 hover:text-orange-600 font-bold">
-                            4.- Web - Horario de Atención Presencial y Agendamiento de Citas.
-                        </a>
-                        <span class="text-xs text-slate-400 font-mono">agenda</span>
-                    </li>
-
-                    <li class="py-3 flex flex-col sm:flex-row justify-between sm:items-center gap-2 hover:bg-slate-50 px-2 rounded-lg transition">
-                        <a href="https://sites.google.com/view/poo-tecnm/asesorias/foro-dudas" target="_blank" rel="noopener noreferrer" class="text-slate-900 hover:text-orange-600 font-bold">
-                            5.- Web - Foro de Preguntas Frecuentes y Consultas Asíncronas.
-                        </a>
-                        <span class="text-xs text-slate-400 font-mono">foro</span>
-                    </li>
-
+                <ul id="lista-asesorias" class="divide-y divide-slate-100 text-sm md:text-base font-medium">
                 </ul>
             </div>
         </section>
@@ -274,9 +141,185 @@
     <footer class="bg-slate-900 text-slate-400 border-t border-slate-800 py-6 mt-12">
         <div class="max-w-7xl mx-auto px-4 text-center text-xs space-y-2">
             <p>Tecnológico Nacional de México (TecNM) - Programación Orientada a Objetos (AED-1286)</p>
-            <p class="text-slate-500">Página Web Interactiva de la Unidad 1 optimizada para enlaces a Google Pages y LMS.</p>
+            <p class="text-slate-500">Página Web Interactiva optimizada para lectura de contenidos dinámicos vía JSON.</p>
         </div>
     </footer>
 
+    <script>
+        const datosReserva = {
+            "titulo_introduccion": "1. Introducción al paradigma de la programación orientada a objetos",
+            "titulo_actividades": "2. ACTIVIDADES (UNIDAD 1)",
+            "titulo_recursos": "3. RECURSOS (UNIDAD 1)",
+            "titulo_asesorias": "4. ASESORÍAS (UNIDAD 1)",
+            "introduccion": [
+                {
+                    "num": "1.1",
+                    "titulo": "1.1. Elementos del modelo de objetos:",
+                    "descripcion": "clases, objetos, abstracción, modularidad, encapsulamiento, herencia y polimorfismo."
+                },
+                {
+                    "num": "1.2",
+                    "titulo": "1.2. Lenguaje de modelado unificado:",
+                    "descripcion": "diagrama de clases."
+                }
+            ],
+            "actividades": [
+                {
+                    "num": "1",
+                    "texto": "1.- Web - Actividad 1.1: Cuadro Comparativo de Paradigmas de Programación.",
+                    "url": "https://sites.google.com/view/poo-tecnm/unidad-1/actividad-1-1"
+                },
+                {
+                    "num": "2",
+                    "texto": "2.- Web - Actividad 1.2: Glosario de Conceptos de Objetos y Citas IEEE.",
+                    "url": "https://sites.google.com/view/poo-tecnm/unidad-1/actividad-1-2"
+                },
+                {
+                    "num": "3",
+                    "texto": "3.- Web - Actividad 1.3: Ejercicios de Modelado de Diagramas UML.",
+                    "url": "https://sites.google.com/view/poo-tecnm/unidad-1/actividad-1-3"
+                },
+                {
+                    "num": "4",
+                    "texto": "4.- Web - Actividad 1.4: Implementación de Clases en Java y Reporte.",
+                    "url": "https://sites.google.com/view/poo-tecnm/unidad-1/actividad-1-4"
+                }
+            ],
+            "recursos": [
+                {
+                    "texto": "1.- Web - Introducción a la programación orientada a objetos.",
+                    "url": "https://sites.google.com/view/poo-tecnm/recursos/introduccion-poo",
+                    "tipo": "sitio web"
+                },
+                {
+                    "texto": "2.- Documento - Plantilla Institucional de Trabajos 1U.",
+                    "url": "https://sites.google.com/view/poo-tecnm/recursos/plantilla-trabajos",
+                    "tipo": "docx"
+                },
+                {
+                    "texto": "3.- PDF - Lista de Cotejo y Rúbrica Oficial de Evaluación.",
+                    "url": "https://sites.google.com/view/poo-tecnm/recursos/lista-cotejo",
+                    "tipo": "pdf"
+                },
+                {
+                    "texto": "4.- Guía - Del Paradigma Estructurado a Programación Orientada a Objetos.",
+                    "url": "https://sites.google.com/view/poo-tecnm/recursos/guia-paradigma-poo",
+                    "tipo": "pdf"
+                },
+                {
+                    "texto": "5.- Cheatsheet - Simbología y Relaciones Diagrama de Clases UML 2.5.",
+                    "url": "https://sites.google.com/view/poo-tecnm/recursos/simbologia-uml",
+                    "tipo": "pdf"
+                },
+                {
+                    "texto": "6.- Código - Repositorio de Ejemplo Java (Clase Estudiante y Persona).",
+                    "url": "https://sites.google.com/view/poo-tecnm/recursos/codigo-java-ejemplo",
+                    "tipo": "zip"
+                },
+                {
+                    "texto": "7.- Guía - Manual de Citación y Referencias Estándar IEEE.",
+                    "url": "https://sites.google.com/view/poo-tecnm/recursos/guia-citacion-ieee",
+                    "tipo": "pdf"
+                }
+            ],
+            "asesorias": [
+                {
+                    "texto": "1.- Web - Sesión 1: Resolución de Dudas de Modelado UML y Relaciones.",
+                    "url": "https://sites.google.com/view/poo-tecnm/asesorias/sesion-1-uml",
+                    "tipo": "video"
+                },
+                {
+                    "texto": "2.- Web - Sesión 2: Taller Práctico - De Diagramas UML a Clases Java.",
+                    "url": "https://sites.google.com/view/poo-tecnm/asesorias/sesion-2-java",
+                    "tipo": "video"
+                },
+                {
+                    "texto": "3.- Web - Sesión 3: Asesoría de Diagnóstico y Errores Sintácticos Frecuentes.",
+                    "url": "https://sites.google.com/view/poo-tecnm/asesorias/sesion-3-errores",
+                    "tipo": "video"
+                },
+                {
+                    "texto": "4.- Web - Horario de Atención Presencial y Agendamiento de Citas.",
+                    "url": "https://sites.google.com/view/poo-tecnm/asesorias/horarios-presenciales",
+                    "tipo": "agenda"
+                },
+                {
+                    "texto": "5.- Web - Foro de Preguntas Frecuentes y Consultas Asíncronas.",
+                    "url": "https://sites.google.com/view/poo-tecnm/asesorias/foro-dudas",
+                    "tipo": "foro"
+                }
+            ]
+        };
+
+        async function cargarDatosUnidad() {
+            let datos = datosReserva;
+            try {
+                const respuesta = await fetch('./data.json');
+                if (respuesta.ok) {
+                    datos = await respuesta.json();
+                }
+            } catch (e) {
+                console.log("Cargando datos locales por omisión");
+            }
+            renderizarPagina(datos);
+        }
+
+        function renderizarPagina(data) {
+            if (data.titulo_introduccion) {
+                document.getElementById('titulo-introduccion').innerText = data.titulo_introduccion;
+            }
+            if (data.titulo_actividades) {
+                document.getElementById('titulo-actividades').innerText = data.titulo_actividades;
+            }
+            if (data.titulo_recursos) {
+                document.getElementById('titulo-recursos').innerText = data.titulo_recursos;
+            }
+            if (data.titulo_asesorias) {
+                document.getElementById('titulo-asesorias').innerText = data.titulo_asesorias;
+            }
+
+            const contenedorIntro = document.getElementById('lista-introduccion');
+            contenedorIntro.innerHTML = (data.introduccion || []).map(item => `
+                <li class="py-3 flex items-start gap-3">
+                    <span class="font-mono text-xs font-bold px-2 py-1 bg-orange-100 text-orange-700 rounded mt-0.5 shrink-0">${item.num}</span>
+                    <div class="text-slate-800 leading-relaxed">
+                        <strong class="text-slate-900 font-bold">${item.titulo}</strong> 
+                        <span class="text-slate-600">${item.descripcion}</span>
+                    </div>
+                </li>
+            `).join('');
+
+            const contenedorActividades = document.getElementById('lista-actividades');
+            contenedorActividades.innerHTML = (data.actividades || []).map(item => `
+                <li class="py-3 px-2 hover:bg-slate-50 rounded-lg transition">
+                    <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="text-slate-900 hover:text-orange-600 font-bold block">
+                        ${item.texto}
+                    </a>
+                </li>
+            `).join('');
+
+            const contenedorRecursos = document.getElementById('lista-recursos');
+            contenedorRecursos.innerHTML = (data.recursos || []).map(item => `
+                <li class="py-3 flex flex-col sm:flex-row justify-between sm:items-center gap-2 hover:bg-slate-50 px-2 rounded-lg transition">
+                    <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="text-slate-900 hover:text-orange-600 font-bold">
+                        ${item.texto}
+                    </a>
+                    <span class="text-xs text-slate-400 font-mono">${item.tipo}</span>
+                </li>
+            `).join('');
+
+            const contenedorAsesorias = document.getElementById('lista-asesorias');
+            contenedorAsesorias.innerHTML = (data.asesorias || []).map(item => `
+                <li class="py-3 flex flex-col sm:flex-row justify-between sm:items-center gap-2 hover:bg-slate-50 px-2 rounded-lg transition">
+                    <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="text-slate-900 hover:text-orange-600 font-bold">
+                        ${item.texto}
+                    </a>
+                    <span class="text-xs text-slate-400 font-mono">${item.tipo}</span>
+                </li>
+            `).join('');
+        }
+
+        document.addEventListener('DOMContentLoaded', cargarDatosUnidad);
+    </script>
 </body>
 </html>
