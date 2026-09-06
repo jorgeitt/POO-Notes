@@ -35,19 +35,19 @@
 ],
 "recursos": [
 {
-"texto": "1.- Web - Introducción a la programación orientada a objetos.",
+"texto": "1.- Web - Fundamentos del modelo de objetos.",
 "url": "https://sites.google.com/view/poo-tecnm/recursos/introduccion-poo",
 "tipo": "sitio web"
 },
 {
-"texto": "2.- Documento - Plantilla Institucional de Trabajos 1U.",
+"texto": "2.- Web - Encapsulamiento, Herencia, Polimorfismo.",
 "url": "https://sites.google.com/view/poo-tecnm/recursos/plantilla-trabajos",
-"tipo": "docx"
+"tipo": "Web"
 },
 {
-"texto": "3.- PDF - Lista de Cotejo y Rúbrica Oficial de Evaluación.",
+"texto": "3.- Web - UML y diagramas de clase.",
 "url": "https://sites.google.com/view/poo-tecnm/recursos/lista-cotejo",
-"tipo": "pdf"
+"tipo": "Web"
 },
 {
 "texto": "4.- Guía - Del Paradigma Estructurado a Programación Orientada a Objetos.",
